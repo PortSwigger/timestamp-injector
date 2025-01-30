@@ -1,6 +1,10 @@
-<p>Easily inject up-to-date timestamps into HTTP requests</p>
+<p>An easy way to inject up-to-date timestamps into HTTP requests.</p>
 
 <p>If you have an API that needs a current or non-duplicate timestamp value to return properly, you can replace the old timestamp value with "UnixTimeS" to inject the current Epoch time into the call.</p>
+
+<h2>Usage</h2>
+
+<p>Replace the value of an outdated timestamp in an HTTP request with "UnixTimeS". Burp will automatically inject the current Epoch time into this location.</p>
 
 <p>It will match:</p>
 
@@ -10,9 +14,7 @@
 
 <blockquote><code>{"timestamp":1730346030}</code></blockquote>
 
-You can also define a time offset in the UI so that the injected timestamp occurs in either the future or past.
-
-Other possible commands are:
+<p>Other possible commands are:</p>
 
 <ul>
         <li>UnixTimeMS — Injects Epoch time in milliseconds</li>
@@ -20,7 +22,21 @@ Other possible commands are:
         <li>URLTimeStamp — Same as previous command, but URL-encoded</li>
 </ul>
 
-<p>Custom timestamps are generated using the <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat</a> Java class. Please see their documentation for a list of supported characters. You can include text as-is into your timestamp with single quotes:</p>
+<h2>Configuration</h2>
+
+<h3>Custom time offset</h3>
+
+<p>Use the UI interface to define a time offset so injected timestamps occur in either the future or past.</p>
+
+<h3>Custom timestamp</h3>
+
+<p>Define a custom timestamp format to inject. For example, yyyy-MM-dd.</p>
+
+<p>Custom timestamps are generated using the <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat</a> Java class. Please see their documentation for a list of supported characters.</p>
+
+<p>You can include text as-is into your timestamp with single quotes.</p>
+
+<p>For example:</p>
 
 <blockquote><code>yyyy-MM-dd'T'HH:mm:ss'Z'</code></blockquote>
 
