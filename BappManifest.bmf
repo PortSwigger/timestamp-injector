@@ -1,0 +1,13 @@
+Uuid: c8421bc7b5884bd6b8c2ad89157f3860
+ExtensionType: 1
+Name: Timestamp Injector
+RepoName: timestamp-injector
+ScreenVersion: 1.5.0
+SerialVersion: 1
+MinPlatformVersion: 16
+ProOnly: False
+Author: Eric Holub
+ShortDescription: Easily inject current timestamps into HTTP requests.
+EntryPoint: build/libs/timestamp-injector-1.5.0.jar
+BuildCommand: ./gradlew jar
+SupportedProducts: Pro, Community
